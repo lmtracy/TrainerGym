@@ -1,4 +1,9 @@
-html, body {
+@font-face {
+  font-family: "Pokemon";
+  src: url("Pokemon-Classic.ttf");
+}
+
+html {
   border: 0px;
   padding-top: 0px;
   background-image: url("images/pokemon-stadium.jpg");
@@ -6,15 +11,58 @@ html, body {
     min-height: auto;
     background-repeat: no repeat;
     background-size: cover;
+    background-position: center;
     overflow: none;
+    background-color: black;
   }
+
+header {
+  text-align: center;
+  font-family: Pokemon;
+  color: white;
+  font-size: 20px;
+}
+
+#main {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.logo {
+  width: 500px;
+}
+
+.trainerPic {
+  height: 400px;
+  position: relative;
+  float: center;
+}
 
 .lauren {
   position: relative;
   float: left;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: Pokemon;
+  color: white;
+  font-size: 12px;
 }
+
 
 .martin {
   position: relative;
   float: right;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  font-family: Pokemon;
+  color: white;
+  font-size: 12px;
+}
+
+.pokemon {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  padding: 8px;
+  background-color: rgba(0,0,0,0.5);
 }
