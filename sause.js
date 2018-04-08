@@ -21,7 +21,7 @@ class Pokemon {
 
         axios.get(`https://pokeapi.co/api/v2/pokemon/${this.dex_num}/`)
             .then((response) => {
-                // check++ //increment on creation
+                check++ //increment on creation
 
                 let info = response.data
                 this["name"] = (info.forms[0].name).charAt(0).toUpperCase() + (info.forms[0].name).slice(1) //set first letter upper
@@ -37,58 +37,56 @@ class Pokemon {
                 this["shiny"] = info.sprites.front_shiny
 
                 for (let i = 0; i < info.moves.length; i++) {
-        				urls.push(info.moves[i].move.url) //push all the moves a pokemon can learn into array
-        				console.log(info.moves[i].move.name)
-        		}
-        		for(let i = 0; i < urls.length; i++){
-        			if(grabFour === 4){
-        				grabFour = 0
-        				urls.length = 0
-        				break
-        			}
-        			++grabFour
-        			randomMove.push(urls[Math.floor(Math.random() * Math.floor(urls.length))])
-        			console.log(randomMove)
-        		}
-        		
-                
+                    urls.push(info.moves[i].move.url) //push all the moves a pokemon can learn into array
+                    console.log(info.moves[i].move.name)
+                }
+                for (let i = 0; i < urls.length; i++) {
+                    if (grabFour === 4) {
+                        grabFour = 0
+                        urls.length = 0
+                        break
+                    }
+                    ++grabFour
+                    randomMove.push(urls[Math.floor(Math.random() * Math.floor(urls.length))])
+                    console.log(randomMove)
+                }
+
+
                 // checkCreated() still need to check if needed as library
             }) //call checkCreated() on new object call
-        }
+    }
 
-        addMove(){
-		     //randomize move
-		    let grabRandom = randomMove[Math.floor(Math.random() * Math.floor(randomMove.length))]
-		    console.log(grabRandom)
-		    axios.get(grabRandom)
-		        .then((response) => {
-		            let info = response.data
-		            
+    addMove() {
+        //randomize move
+        let grabRandom = randomMove[Math.floor(Math.random() * Math.floor(randomMove.length))]
+        console.log(grabRandom)
+        axios.get(grabRandom)
+            .then((response) => {
+                let info = response.data
 
-		            // checkMoves++
-		            console.log(checkMoves)
-		            let move = new Moves(info.names[2].name, info.priority, info.power, info.accuracy, info.pp)
-		            if(this.moves.length === 0){ //if moves list is empty push
-		            		this.moves.push(move)
-		            }else{
-			            for (let i = 0; i < this.moves.length; i++) {
-			            	console.log(this.moves[i].name)
-			            	console.log(move.name)
-				                if (this.moves[i].name === move.name) { //if move already exists, remove the move
-				                    if(randomIndex !== -1){
-				                    	console.log(randomMove)
-				                    	randomMove.splice(randomIndex, 1) //splice the list based on index and return it without the move
-				                    	console.log(randomMove)
-				                    }
-				                } else if (this.moves.length < 4) {
-				                    // addMove(pokemon) //otherwise call function again and let RNG give us a new 
-				                    this.moves.push(move) //otherwise push the move to the array
-				                }
-				            }
-		            }
-		            // checkCreatedMoves() need to check if still need
-		        })
-	}
+                checkMoves++
+                let move = new Moves(info.names[2].name, info.priority, info.power, info.accuracy, info.pp)
+                if (this.moves.length === 0) { //if moves list is empty push
+                    this.moves.push(move)
+                } else {
+                    for (let i = 0; i < this.moves.length; i++) {
+                        console.log(this.moves[i].name)
+                        console.log(move.name)
+                        if (this.moves[i].name === move.name) { //if move already exists, remove the move
+                            if (randomIndex !== -1) {
+                                console.log(randomMove)
+                                randomMove.splice(randomIndex, 1) //splice the list based on index and return it without the move
+                                console.log(randomMove)
+                            }
+                        } else if (this.moves.length < 4) {
+                            // addMove(pokemon) //otherwise call function again and let RNG give us a new 
+                            this.moves.push(move) //otherwise push the move to the array
+                        }
+                    }
+                }
+                // checkCreatedMoves() need to check if still need
+            })
+    }
 }
 
 class Sause {
@@ -112,3 +110,18 @@ class Sause {
 
     }
 }
+
+function checkCreated() {
+    if (check === 3) { //if called 3 times, all the pokemon have been created so do main
+        createMove()
+    }
+}
+
+// function checkCreatedMoves() {
+//     if (checkMoves === 12) { //if called 12 times, all the moves have been created so add them.
+//         console.log("Loaded Moves")
+
+//         setTimeout(main(), 15000)
+
+//     }
+// }
