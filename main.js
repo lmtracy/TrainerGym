@@ -27,7 +27,7 @@ function displayPokemon(){
     let laurenMainPokemonStats = document.querySelector("#lauren-main-stats")
 
     martinPokemonOne.addEventListener("click", (event) => {
-        martinMainPokemon.src = martinParty[0]
+        martinMainPokemon.src = martinParty[0].sprite
         //add a p tag to display stats?
         martinMainPokemonStats.innerHTML =` <u>${martinParty[0].name}:</u> <br/>
 								<u>HP</u>: ${martinParty[0].hp} <br/>
@@ -38,7 +38,7 @@ function displayPokemon(){
                             })
 
     martinPokemonTwo.addEventListener("click", (event) => {
-        martinMainPokemon.src = martinParty[1]
+        martinMainPokemon.src = martinParty[1].sprite
         martinMainPokemonStats.innerHTML = `<u>${martinParty[1].name}:</u> <br/>
 								<u>HP</u>: ${martinParty[1].hp} <br/>
 								<u>Attack</u>: ${martinParty[1].attack} <br/>
@@ -48,7 +48,7 @@ function displayPokemon(){
                             })
     
     martinPokemonThree.addEventListener("click", (event) => {
-        martinMainPokemon.src = martinParty[2]
+        martinMainPokemon.src = martinParty[2].sprite
         martinMainPokemonStats.innerHTML = `<u>${martinParty[2].name}:</u> <br/>
 								<u>HP</u>: ${martinParty[2].hp} <br/>
 								<u>Attack</u>: ${martinParty[2].attack} <br/>
@@ -58,7 +58,7 @@ function displayPokemon(){
                             })
 
     laurenPokemonOne.addEventListener("click", (event) => {
-        laurenMainPokemon.src = laurenParty[0]
+        laurenMainPokemon.src = laurenParty[0].pic
         //add a p tag to display stats?
         laurenMainPokemonStats.innerHTML = `<u>${laurenParty[0].name}:</u> <br/>
 								<u>HP</u>: ${laurenParty[0].hp} <br/>
@@ -69,7 +69,7 @@ function displayPokemon(){
                             })
 
     laurenPokemonTwo.addEventListener("click", (event) => {
-        laurenMainPokemon.src = laurenParty[1]
+        laurenMainPokemon.src = laurenParty[1].pic
         laurenMainPokemonStats.innerHTML = `<u>${laurenParty[1].name}:</u> <br/>
 								<u>HP</u>: ${laurenParty[1].hp} <br/>
 								<u>Attack</u>: ${laurenParty[1].attack} <br/>
@@ -79,7 +79,7 @@ function displayPokemon(){
                             })
     
     laurenPokemonThree.addEventListener("click", (event) => {
-        laurenMainPokemon.src = laurenParty[2]
+        laurenMainPokemon.src = laurenParty[2].pic
         laurenMainPokemonStats.innerHTML = `<u>${laurenParty[2].name}:</u> <br/>
 								<u>HP</u>: ${laurenParty[2].hp} <br/>
 								<u>Attack</u>: ${laurenParty[2].attack} <br/>
