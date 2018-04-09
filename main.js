@@ -3,7 +3,7 @@ let porygonZ = new MartinPokemon(474)
 let scrafty = new MartinPokemon(560)
 
 let martinParty = [dragonite, porygonZ, scrafty]
-let sause = new Sause(party)
+let sause = new Sause(martinParty)
 
 let laurenParty = sapphire.all()
 martinParty = sause.all() //show all functionality by overwriting previous array

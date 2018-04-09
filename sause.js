@@ -38,7 +38,7 @@ class MartinPokemon {
 
                 for (let i = 0; i < info.moves.length; i++) {
                     urls.push(info.moves[i].move.url) //push all the moves a pokemon can learn into array
-                    console.log(info.moves[i].move.name)
+                    // console.log(info.moves[i].move.name)
                 }
                 for (let i = 0; i < urls.length; i++) {
                     if (grabFour === 4) {
@@ -48,7 +48,7 @@ class MartinPokemon {
                     }
                     ++grabFour
                     randomMove.push(urls[Math.floor(Math.random() * Math.floor(urls.length))])
-                    console.log(randomMove)
+                    // console.log(randomMove)
                 }
 
 
@@ -59,7 +59,7 @@ class MartinPokemon {
     addMove() {
         //randomize move
         let grabRandom = randomMove[Math.floor(Math.random() * Math.floor(randomMove.length))]
-        console.log(grabRandom)
+        // console.log(grabRandom)
         axios.get(grabRandom)
             .then((response) => {
                 let info = response.data
