@@ -36,7 +36,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/249/`)
     let defense = getStat(stats, "special-defense")
     let pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png`;
 
-    let pokemon = new Pokemon(name, hp, attack, defense, abilities, pic)
+    let pokemon = new LaurenPokemon(name, hp, attack, defense, abilities, pic)
     sapphire.add(pokemon)
 })
     //API for Snorlax
@@ -50,7 +50,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/249/`)
      let defense = getStat(stats, "special-defense")
      let pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png`;
 
-     let pokemon = new Pokemon(name, hp, attack, defense, abilities, pic)
+     let pokemon = new LaurenPokemon(name, hp, attack, defense, abilities, pic)
      sapphire.add(pokemon)
  })
 
@@ -65,7 +65,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/249/`)
         let defense = getStat(stats, "special-defense")
         let pic = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png`;
 
-        let pokemon = new Pokemon(name, hp, attack, defense, abilities, pic)
+        let pokemon = new LaurenPokemon(name, hp, attack, defense, abilities, pic)
         sapphire.add(pokemon)
 })
 
