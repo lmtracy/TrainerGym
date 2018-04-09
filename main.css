@@ -6,6 +6,8 @@
 html {
   border: 0px;
   padding-top: 0px;
+  font-family: Pokemon;
+  color: white;
   background-image: url("images/Pokemon-Stadium.jpg");
     width: 100%;
     min-height: auto;
@@ -19,8 +21,6 @@ html {
 header {
   padding: 0;
   text-align: center;
-  font-family: Pokemon;
-  color: white;
   font-size: 20px;
 }
 
@@ -44,8 +44,6 @@ header {
   float: left;
   padding: 10px;
   width: 30%;
-  font-family: Pokemon;
-  color: white;
   font-size: 12px;
 }
 
@@ -56,8 +54,6 @@ header {
   text-align: right;
   width: 30%;
   padding: 10px;
-  font-family: Pokemon;
-  color: white;
   font-size: 12px;
 }
 
@@ -79,9 +75,10 @@ header {
   display: inline-block;
   margin: 0 auto;
   width: 35%;
-  height: 400px;
+  height: 500px;
   text-align: center;
-  color: white;
+  font-size: 10px;
+  text-decoration: none;
 }
 
 .pokeLT {
