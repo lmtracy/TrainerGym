@@ -15,7 +15,7 @@ class Moves {
     }
 }
 
-class Pokemon {
+class MartinPokemon {
     constructor(dex_num) {
         this.dex_num = dex_num
 
@@ -38,7 +38,7 @@ class Pokemon {
 
                 for (let i = 0; i < info.moves.length; i++) {
                     urls.push(info.moves[i].move.url) //push all the moves a pokemon can learn into array
-                    console.log(info.moves[i].move.name)
+                    // console.log(info.moves[i].move.name)
                 }
                 for (let i = 0; i < urls.length; i++) {
                     if (grabFour === 4) {
@@ -48,7 +48,7 @@ class Pokemon {
                     }
                     ++grabFour
                     randomMove.push(urls[Math.floor(Math.random() * Math.floor(urls.length))])
-                    console.log(randomMove)
+                    // console.log(randomMove)
                 }
 
 
@@ -59,7 +59,7 @@ class Pokemon {
     addMove() {
         //randomize move
         let grabRandom = randomMove[Math.floor(Math.random() * Math.floor(randomMove.length))]
-        console.log(grabRandom)
+        // console.log(grabRandom)
         axios.get(grabRandom)
             .then((response) => {
                 let info = response.data
@@ -113,7 +113,7 @@ class Sause {
 
 function checkCreated() {
     if (check === 3) { //if called 3 times, all the pokemon have been created so do main
-        createMove()
+        // createMove()
     }
 }
 
