@@ -10,68 +10,83 @@ martinParty = sause.all() //show all functionality by overwriting previous array
 
 function displayPokemon(){
     // need to change classes to target them better (one at a time)
-    let martinPokemon = document.querySelectorAll(".pokeThumb")
-    let laurenPokemon = document.querySelectorAll(".pokeThumb") 
+    let martinPokemonOne = document.querySelector("#martin-thumb-one")
+    let martinPokemonTwo = document.querySelector("#martin-thumb-two")
+    let martinPokemonThree = document.querySelector("#martin-thumb-three")
 
-    //need to create empty img tags for these
-    let martinMainPokemon = document.querySelectorAll(".pokeMS") 
-    let laurenMainPokemon = document.querySelectorAll(".pokeLT")
+    let laurenPokemonOne = document.querySelector("#lauren-thumb-one")
+    let laurenPokemonTwo = document.querySelector("#lauren-thumb-two")
+    let laurenPokemonThree = document.querySelector("#lauren-thumb-three") 
 
-    martinPokemon.addEventListener("click", (event) => {
-        // martinMainPokemon.src = martinParty[0]
+    //need to tag empty img tags for these
+    let martinMainPokemon = document.querySelector("#martin-main") 
+    let laurenMainPokemon = document.querySelector("#lauren-main")
+
+    //need to tag empty p tags for these
+    let martinMainPokemonStats = document.querySelector("#martin-main-stats")
+    let laurenMainPokemonStats = document.querySelector("#lauren-main-stats")
+
+    martinPokemonOne.addEventListener("click", (event) => {
+        martinMainPokemon.src = martinParty[0]
         //add a p tag to display stats?
-        // martinMainPokemon.innerHTML = <u>${martinParty[0].name}:</u> <br/>
-								// <u>HP</u>: ${martinParty[0].hp} <br/>
-								// <u>Attack</u>: ${martinParty[0].attack} <br/>
-								// <u>Defense</u>: ${martinParty[0].defense} <br/>
-								// <u>Abilities</u>: <br/> ${martinParty[0].abilities[0]} <br/> ${martinParty[0].abilities[1]} <br/>
-    })
+        martinMainPokemonStats.innerHTML =` <u>${martinParty[0].name}:</u> <br/>
+								<u>HP</u>: ${martinParty[0].hp} <br/>
+								<u>Attack</u>: ${martinParty[0].attack} <br/>
+								<u>Defense</u>: ${martinParty[0].defense} <br/>
+								<u>Abilities</u>: <br/> ${martinParty[0].abilities[0]} <br/> ${martinParty[0].abilities[1]} <br/>
+                                `
+                            })
 
-    martinPokemon.addEventListener("click", (event) => {
-        // martinMainPokemon.src = martinParty[1]
-        // martinMainPokemon.innerHTML = <u>${martinParty[1].name}:</u> <br/>
-								// <u>HP</u>: ${martinParty[1].hp} <br/>
-								// <u>Attack</u>: ${martinParty[1].attack} <br/>
-								// <u>Defense</u>: ${martinParty[1].defense} <br/>
-								// <u>Abilities</u>: <br/> ${martinParty[1].abilities[0]} <br/> ${martinParty[1].abilities[1]} <br/>   
-    })
+    martinPokemonTwo.addEventListener("click", (event) => {
+        martinMainPokemon.src = martinParty[1]
+        martinMainPokemonStats.innerHTML = `<u>${martinParty[1].name}:</u> <br/>
+								<u>HP</u>: ${martinParty[1].hp} <br/>
+								<u>Attack</u>: ${martinParty[1].attack} <br/>
+								<u>Defense</u>: ${martinParty[1].defense} <br/>
+								<u>Abilities</u>: <br/> ${martinParty[1].abilities[0]} <br/> ${martinParty[1].abilities[1]} <br/>   
+                                `
+                            })
     
-    martinPokemon.addEventListener("click", (event) => {
-        // martinMainPokemon.src = martinParty[2]
-        // martinMainPokemon.innerHTML = <u>${martinParty[2].name}:</u> <br/>
-								// <u>HP</u>: ${martinParty[2].hp} <br/>
-								// <u>Attack</u>: ${martinParty[2].attack} <br/>
-								// <u>Defense</u>: ${martinParty[2].defense} <br/>
-								// <u>Abilities</u>: <br/> ${martinParty[2].abilities[0]} <br/> ${martinParty[2].abilities[1]} <br/>   
-    })
+    martinPokemonThree.addEventListener("click", (event) => {
+        martinMainPokemon.src = martinParty[2]
+        martinMainPokemonStats.innerHTML = `<u>${martinParty[2].name}:</u> <br/>
+								<u>HP</u>: ${martinParty[2].hp} <br/>
+								<u>Attack</u>: ${martinParty[2].attack} <br/>
+								<u>Defense</u>: ${martinParty[2].defense} <br/>
+								<u>Abilities</u>: <br/> ${martinParty[2].abilities[0]} <br/> ${martinParty[2].abilities[1]} <br/>   
+                                `
+                            })
 
-    laurenPokemon.addEventListener("click", (event) => {
-        // laurenMainPokemon.src = laurenParty[0]
+    laurenPokemonOne.addEventListener("click", (event) => {
+        laurenMainPokemon.src = laurenParty[0]
         //add a p tag to display stats?
-        // laurenMainPokemon.innerHTML = <u>${laurenParty[0].name}:</u> <br/>
-								// <u>HP</u>: ${laurenParty[0].hp} <br/>
-								// <u>Attack</u>: ${laurenParty[0].attack} <br/>
-								// <u>Defense</u>: ${laurenParty[0].defense} <br/>
-								// <u>Abilities</u>: <br/> ${laurenParty[0].abilities[0]} <br/> ${laurenParty[0].abilities[1]} <br/>
-    })
+        laurenMainPokemonStats.innerHTML = `<u>${laurenParty[0].name}:</u> <br/>
+								<u>HP</u>: ${laurenParty[0].hp} <br/>
+								<u>Attack</u>: ${laurenParty[0].attack} <br/>
+								<u>Defense</u>: ${laurenParty[0].defense} <br/>
+								<u>Abilities</u>: <br/> ${laurenParty[0].abilities[0]} <br/> ${laurenParty[0].abilities[1]} <br/>
+                                `
+                            })
 
-    laurenPokemon.addEventListener("click", (event) => {
-        // laurenMainPokemon.src = laurenParty[1]
-        // laurenMainPokemon.innerHTML = <u>${laurenParty[1].name}:</u> <br/>
-								// <u>HP</u>: ${laurenParty[1].hp} <br/>
-								// <u>Attack</u>: ${laurenParty[1].attack} <br/>
-								// <u>Defense</u>: ${laurenParty[1].defense} <br/>
-								// <u>Abilities</u>: <br/> ${laurenParty[1].abilities[0]} <br/> ${laurenParty[1].abilities[1]} <br/>   
-    })
+    laurenPokemonTwo.addEventListener("click", (event) => {
+        laurenMainPokemon.src = laurenParty[1]
+        laurenMainPokemonStats.innerHTML = `<u>${laurenParty[1].name}:</u> <br/>
+								<u>HP</u>: ${laurenParty[1].hp} <br/>
+								<u>Attack</u>: ${laurenParty[1].attack} <br/>
+								<u>Defense</u>: ${laurenParty[1].defense} <br/>
+								<u>Abilities</u>: <br/> ${laurenParty[1].abilities[0]} <br/> ${laurenParty[1].abilities[1]} <br/>   
+                                `
+                            })
     
-    laurenPokemon.addEventListener("click", (event) => {
-        // laurenMainPokemon.src = laurenParty[2]
-        // laurenMainPokemon.innerHTML = <u>${laurenParty[2].name}:</u> <br/>
-								// <u>HP</u>: ${laurenParty[2].hp} <br/>
-								// <u>Attack</u>: ${laurenParty[2].attack} <br/>
-								// <u>Defense</u>: ${laurenParty[2].defense} <br/>
-								// <u>Abilities</u>: <br/> ${laurenParty[2].abilities[0]} <br/> ${laurenParty[2].abilities[1]} <br/>   
-    })
+    laurenPokemonThree.addEventListener("click", (event) => {
+        laurenMainPokemon.src = laurenParty[2]
+        laurenMainPokemonStats.innerHTML = `<u>${laurenParty[2].name}:</u> <br/>
+								<u>HP</u>: ${laurenParty[2].hp} <br/>
+								<u>Attack</u>: ${laurenParty[2].attack} <br/>
+								<u>Defense</u>: ${laurenParty[2].defense} <br/>
+								<u>Abilities</u>: <br/> ${laurenParty[2].abilities[0]} <br/> ${laurenParty[2].abilities[1]} <br/>   
+                                `
+                            })
 }
 
 displayPokemon()
