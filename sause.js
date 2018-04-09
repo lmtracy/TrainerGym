@@ -113,7 +113,7 @@ class Sause {
 
 function checkCreated() {
     if (check === 3) { //if called 3 times, all the pokemon have been created so do main
-        createMove()
+        // createMove()
     }
 }
 
