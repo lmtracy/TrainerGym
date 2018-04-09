@@ -6,7 +6,7 @@ let martinParty = [dragonite, porygonZ, scrafty]
 let sause = new Sause(party)
 
 let laurenParty = sapphire.all()
-let martinParty = sause.all() //show all functionality by overwriting previous array
+martinParty = sause.all() //show all functionality by overwriting previous array
 
 function displayPokemon(){
     // need to change classes to target them better (one at a time)
