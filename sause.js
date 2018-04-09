@@ -15,7 +15,7 @@ class Moves {
     }
 }
 
-class Pokemon {
+class MartinPokemon {
     constructor(dex_num) {
         this.dex_num = dex_num
 
