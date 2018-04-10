@@ -83,7 +83,7 @@ header {
   text-align: center;
 }
 
-.button {
+#button {
   top: 20px;
   background-color: white;
   border: none;
@@ -92,7 +92,7 @@ header {
   font-family: Pokemon;
 }
 
-.button:hover {
+#button:hover {
   background-color: black;
   color: white;
 }

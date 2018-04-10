@@ -99,8 +99,8 @@ function displayPokemon(){
                               }
             }
 })
-let doBattle = document.querySelector(".button")
-let battleResult = document.querySelector(".result")
+let doBattle = document.querySelector("#button")
+let battleResult = document.querySelector("#result")
 let randomWinner = []
 
 doBattle.addEventListener("click", (event) => {
@@ -110,7 +110,7 @@ doBattle.addEventListener("click", (event) => {
                 randomWinner.push(martinParty[i])
                 randomWinner.push(laurenParty[i])
                 
-                battleResult.innerHTML = `${randomWinner[Math.floor(Math.random() * Math.floor(randomWinner.length))]} wins!`
+                battleResult.innerHTML = `${randomWinner[Math.floor(Math.random() * Math.floor(randomWinner.length))].name} wins!`
             
     }
 }
