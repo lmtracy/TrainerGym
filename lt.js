@@ -29,7 +29,7 @@ let sapphire = new Sapphire()
 axios.get(`https://pokeapi.co/api/v2/pokemon/249/`)
 .then((response) => {
     let { name, stats, abilities } = response.data
-
+    name = name.charAt(0).toUpperCase() + name.slice(1)
     abilities = getAbilities(abilities)
     let hp = getStat(stats, "hp")
     let attack = getStat(stats, "attack")
@@ -43,7 +43,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/249/`)
  axios.get(`https://pokeapi.co/api/v2/pokemon/143/`)
  .then((response) => {
      let { name, stats, abilities } = response.data
-
+     name = name.charAt(0).toUpperCase() + name.slice(1)
      abilities = getAbilities(abilities)
      let hp = getStat(stats, "hp")
      let attack = getStat(stats, "attack")
@@ -58,7 +58,7 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/249/`)
  axios.get(`https://pokeapi.co/api/v2/pokemon/175/`)
     .then((response) => {
         let { name, stats, abilities } = response.data
-
+        name = name.charAt(0).toUpperCase() + name.slice(1)
         abilities = getAbilities(abilities)
         let hp = getStat(stats, "hp")
         let attack = getStat(stats, "attack")
@@ -77,6 +77,6 @@ function getStat(stats, name) {
 
 function getAbilities(ability) {
     let abilities = []
-    ability.forEach(el => abilities.push(el.ability.name))
-    return abilities.join(", ")
+    ability.forEach(el => abilities.push(el.ability.name.charAt(0).toUpperCase() + el.ability.name.slice(1)))
+    return abilities
 }
