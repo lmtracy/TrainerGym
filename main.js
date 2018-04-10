@@ -107,8 +107,8 @@ doBattle.addEventListener("click", (event) => {
     battleResult.innerHTML = ""
     for(let i = 0; i < martinParty.length; i++){
         console.log(martinParty[i].sprite)
-        console.log(laurenParty[i].pic)
         console.log(martinMainPokemon.src)
+        console.log(laurenParty[i].pic)
         console.log(laurenMainPokemon.src)
         if(martinParty[i].sprite === martinMainPokemon.src
             && laurenParty[i].pic === laurenMainPokemon.src){
