@@ -26,8 +26,12 @@ function displayPokemon(){
     let martinMainPokemonStats = document.querySelector("#martin-main-stats")
     let laurenMainPokemonStats = document.querySelector("#lauren-main-stats")
 
+    let currentMartinPokemon
+    let currentLaurenPokemon
+
     martinPokemonOne.addEventListener("click", (event) => {
         martinMainPokemon.src = martinParty[0].sprite
+        currentMartinPokemon = martinParty[0]
         martinMainPokemonStats.innerHTML =` <u>${martinParty[0].name}:</u> <br/>
 								<u>HP</u>: ${martinParty[0].hp} <br/>
 								<u>Attack</u>: ${martinParty[0].attack} <br/>
@@ -38,6 +42,7 @@ function displayPokemon(){
 
     martinPokemonTwo.addEventListener("click", (event) => {
         martinMainPokemon.src = martinParty[1].sprite
+        currentMartinPokemon = martinParty[1]
         martinMainPokemonStats.innerHTML = `<u>${martinParty[1].name}:</u> <br/>
 								<u>HP</u>: ${martinParty[1].hp} <br/>
 								<u>Attack</u>: ${martinParty[1].attack} <br/>
@@ -48,6 +53,7 @@ function displayPokemon(){
 
     martinPokemonThree.addEventListener("click", (event) => {
         martinMainPokemon.src = martinParty[2].sprite
+        currentMartinPokemon = martinParty[2]
         martinMainPokemonStats.innerHTML = `<u>${martinParty[2].name}:</u> <br/>
 								<u>HP</u>: ${martinParty[2].hp} <br/>
 								<u>Attack</u>: ${martinParty[2].attack} <br/>
@@ -61,6 +67,7 @@ function displayPokemon(){
         for (let i = 0; i < laurenParty.length; i++) {
           if (laurenParty[i].name === `Lugia`) {
             laurenMainPokemon.src = laurenParty[i].pic
+            currentLaurenPokemon = laurenParty[i]
             laurenMainPokemonStats.innerHTML = `<u>${laurenParty[i].name}:</u> <br/>
                     <u>HP</u>: ${laurenParty[i].hp} <br/>
                     <u>Attack</u>: ${laurenParty[i].attack} <br/>
@@ -75,6 +82,7 @@ function displayPokemon(){
       for (let i = 0; i < laurenParty.length; i++) {
         if (laurenParty[i].name === `Snorlax`) {
             laurenMainPokemon.src = laurenParty[i].pic
+            currentLaurenPokemon = laurenParty[i]
         laurenMainPokemonStats.innerHTML = `<u>${laurenParty[i].name}:</u> <br/>
 								<u>HP</u>: ${laurenParty[i].hp} <br/>
 								<u>Attack</u>: ${laurenParty[i].attack} <br/>
@@ -89,6 +97,7 @@ function displayPokemon(){
       for (let i = 0; i < laurenParty.length; i++) {
         if (laurenParty[i].name === `Togepi`) {
             laurenMainPokemon.src = laurenParty[i].pic
+            currentLaurenPokemon = laurenParty[i]
           laurenMainPokemonStats.innerHTML = `<u>${laurenParty[i].name}:</u> <br/>
   								<u>HP</u>: ${laurenParty[i].hp} <br/>
   								<u>Attack</u>: ${laurenParty[i].attack} <br/>
@@ -105,18 +114,8 @@ let randomWinner = []
 doBattle.addEventListener("click", (event) => {
     randomWinner = []
     battleResult.innerHTML = ""
-    for(let i = 0; i < martinParty.length; i++){
-        console.log(martinParty[i].sprite)
-        console.log(martinMainPokemon.src)
-        console.log(laurenParty[i].pic)
-        console.log(laurenMainPokemon.src)
-        if(martinParty[i].sprite === martinMainPokemon.src
-            && laurenParty[i].pic === laurenMainPokemon.src){
-                randomWinner.push(martinParty[i])
-                randomWinner.push(laurenParty[i])
-                battleResult.innerHTML = `${randomWinner[Math.round(Math.random())].name} wins!`
-    }
-}
+    randomWinner.push(currentMartinPokemon, currentLaurenPokemon)
+    battleResult.innerHTML = `${randomWinner[Math.round(Math.random())].name} wins!`
 })
 }
 displayPokemon()
