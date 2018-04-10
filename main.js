@@ -99,10 +99,6 @@ function displayPokemon(){
                               }
             }
 })
-}
-displayPokemon()
-
-
 let doBattle = document.querySelector(".button")
 let battleResult = document.querySelector(".result")
 let randomWinner = []
@@ -111,11 +107,15 @@ doBattle.addEventListener("click", (event) => {
     for(let i = 0; i < martinParty.length; i++){
         if(martinParty[i].sprite === martinMainPokemon.src 
             && laurenParty[i].pic === laurenMainPokemon.src){
-                random.winner.push(martinParty[i])
-                random.winner.push(laurenParty[i])
+                randomWinner.push(martinParty[i])
+                randomWinner.push(laurenParty[i])
                 
                 battleResult.innerHTML = `${randomWinner[Math.floor(Math.random() * Math.floor(randomWinner.length))]} wins!`
             
     }
 }
 })
+}
+displayPokemon()
+
+
