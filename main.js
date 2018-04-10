@@ -58,43 +58,42 @@ function displayPokemon(){
 
 
     laurenPokemonOne.addEventListener("click", (event) => {
-        laurenMainPokemon.src = laurenParty[0].pic
         for (let i = 0; i < laurenParty.length; i++) {
           if (laurenParty[i].name === `Lugia`) {
-            laurenMainPokemonStats.innerHTML = `<u>${laurenParty[0].name}:</u> <br/>
-                    <u>HP</u>: ${laurenParty[0].hp} <br/>
-                    <u>Attack</u>: ${laurenParty[0].attack} <br/>
-                    <u>Defense</u>: ${laurenParty[0].defense} <br/>
-                    <u>Abilities</u>: <br/> ${laurenParty[0].abilities[0]} <br/> ${laurenParty[0].abilities[1]} <br/>
+            laurenMainPokemon.src = laurenParty[i].pic
+            laurenMainPokemonStats.innerHTML = `<u>${laurenParty[i].name}:</u> <br/>
+                    <u>HP</u>: ${laurenParty[i].hp} <br/>
+                    <u>Attack</u>: ${laurenParty[i].attack} <br/>
+                    <u>Defense</u>: ${laurenParty[i].defense} <br/>
+                    <u>Abilities</u>: <br/> ${laurenParty[i].abilities[0]} <br/> ${laurenParty[i].abilities[1]} <br/>
                                     `
                                 }
           }
 })
 
     laurenPokemonTwo.addEventListener("click", (event) => {
-      laurenMainPokemon.src = laurenParty[1].pic
       for (let i = 0; i < laurenParty.length; i++) {
         if (laurenParty[i].name === `Snorlax`) {
-        laurenMainPokemonStats.innerHTML = `<u>${laurenParty[1].name}:</u> <br/>
-								<u>HP</u>: ${laurenParty[1].hp} <br/>
-								<u>Attack</u>: ${laurenParty[1].attack} <br/>
-								<u>Defense</u>: ${laurenParty[1].defense} <br/>
-								<u>Abilities</u>: <br/> ${laurenParty[1].abilities[0]} <br/> ${laurenParty[1].abilities[1]} <br/>
+            laurenMainPokemon.src = laurenParty[i].pic
+        laurenMainPokemonStats.innerHTML = `<u>${laurenParty[i].name}:</u> <br/>
+								<u>HP</u>: ${laurenParty[i].hp} <br/>
+								<u>Attack</u>: ${laurenParty[i].attack} <br/>
+								<u>Defense</u>: ${laurenParty[i].defense} <br/>
+								<u>Abilities</u>: <br/> ${laurenParty[i].abilities[0]} <br/> ${laurenParty[i].abilities[1]} <br/>
                                 `
                             }
             }
   })
 
     laurenPokemonThree.addEventListener("click", (event) => {
-      laurenMainPokemon.src = laurenParty[2].pic
-
       for (let i = 0; i < laurenParty.length; i++) {
         if (laurenParty[i].name === `Togepi`) {
-          laurenMainPokemonStats.innerHTML = `<u>${laurenParty[2].name}:</u> <br/>
-  								<u>HP</u>: ${laurenParty[2].hp} <br/>
-  								<u>Attack</u>: ${laurenParty[2].attack} <br/>
-  								<u>Defense</u>: ${laurenParty[2].defense} <br/>
-  								<u>Abilities</u>: <br/> ${laurenParty[2].abilities[0]} <br/> ${laurenParty[2].abilities[1]} <br/>
+            laurenMainPokemon.src = laurenParty[i].pic
+          laurenMainPokemonStats.innerHTML = `<u>${laurenParty[i].name}:</u> <br/>
+  								<u>HP</u>: ${laurenParty[i].hp} <br/>
+  								<u>Attack</u>: ${laurenParty[i].attack} <br/>
+  								<u>Defense</u>: ${laurenParty[i].defense} <br/>
+  								<u>Abilities</u>: <br/> ${laurenParty[i].abilities[0]} <br/> ${laurenParty[i].abilities[1]} <br/>
                                   `
                               }
             }
