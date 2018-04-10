@@ -117,4 +117,5 @@ doBattle.addEventListener("click", (event) => {
                 battleResult.innerHTML = `${randomWinner[Math.floor(Math.random() * Math.floor(randomWinner.length))]} wins!`
             
     }
+}
 })
