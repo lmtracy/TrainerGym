@@ -103,15 +103,18 @@ let battleResult = document.querySelector("#result")
 let randomWinner = []
 
 doBattle.addEventListener("click", (event) => {
-  randomWinner = []
+    randomWinner = []
+    battleResult.innerHTML = ""
     for(let i = 0; i < martinParty.length; i++){
+        console.log(martinParty[i].sprite)
+        console.log(laurenParty[i].pic)
+        console.log(martinMainPokemon.src)
+        console.log(laurenMainPokemon.src)
         if(martinParty[i].sprite === martinMainPokemon.src
             && laurenParty[i].pic === laurenMainPokemon.src){
                 randomWinner.push(martinParty[i])
                 randomWinner.push(laurenParty[i])
-
-                battleResult.innerHTML = `${randomWinner[Math.floor(Math.random() * Math.floor(randomWinner.length))].name} wins!`
-
+                battleResult.innerHTML = `${randomWinner[Math.round(Math.random())].name} wins!`
     }
 }
 })
